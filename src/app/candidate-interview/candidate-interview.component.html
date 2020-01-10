@@ -1,0 +1,127 @@
+
+
+
+
+<div class="container card card-body col-md-4 offset-4 mt-5">
+<form action="" #candidateInfo='ngForm' (ngSubmit)='addCandidate(candidateInfo)' id="add"> <br>
+    <h1 style="color: darkslateblue;" style="text-align: center">Add Candidate Interview</h1>
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp">
+            <input type="text" name="candidateName" #candidateName='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter candidate name"> </div>
+        <div *ngIf="candidateName.touched && candidateName.invalid">
+            <div class="alert alert-danger" *ngIf="candidateName.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    
+    
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="email" name="email" #email='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter email"> </div>
+        <div *ngIf="email.touched && email.invalid">
+            <div class="alert alert-danger" *ngIf="email.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    </div>
+   
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><input type="text" name="govtId" #govtId='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter govtId"> </div>
+        <div *ngIf="govtId.touched && govtId.invalid">
+            <div class="alert alert-danger" *ngIf="govtId.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="number" name="phoneNumber" #phoneNumber='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter phoneNumber"> </div>
+        <div *ngIf="phoneNumber.touched && phoneNumber.invalid">
+            <div class="alert alert-danger" *ngIf="phoneNumber.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    </div>
+   
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><input type="text" name="relocate" #relocate='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter relocate"> </div>
+        <div *ngIf="relocate.touched && relocate.invalid">
+            <div class="alert alert-danger" *ngIf="relocate.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+   
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="text" name="candidateType" #candidateType='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter candidateType"> </div>
+        <div *ngIf="candidateType.touched && candidateType.invalid">
+            <div class="alert alert-danger" *ngIf="candidateType.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    </div>
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><input type="date" name="yearOfPassing" #yearOfPassing='ngModel' ngModel
+                id="" class="form-control" required placeholder="enter yearOfPassing"> </div>
+        <div *ngIf="yearOfPassing.touched && yearOfPassing.invalid">
+            <div class="alert alert-danger" *ngIf="yearOfPassing.errors.required"><small
+                    style="text-align: right">This field is required</small></div>
+        </div>
+   
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="number" name="percentage" #percentage='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter percentage"> </div>
+        <div *ngIf="percentage.touched && percentage.invalid">
+            <div class="alert alert-danger" *ngIf="percentage.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    </div>
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><select class="form-control" id="input" name="yearOfExperience" #yearOfExperience='ngModel' ngModel
+                required>
+                <option value="" selected disabled hidden>Enter Year of Experience</option>
+                <option>0</option>
+                <option>0.6</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+            </select> </div>
+        <div *ngIf="yearOfExperience.touched && yearOfExperience.invalid">
+            <div class="alert alert-danger" *ngIf="yearOfExperience.errors.required"><small style="text-align: right"> This field
+                    is required</small></div>
+        </div>
+ 
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="text" name="currentDesignation"
+                #currentDesignation='ngModel' ngModel id="" class="form-control" required
+                placeholder="enter currentDesignation"> </div>
+        <div *ngIf="currentDesignation.touched && currentDesignation.invalid">
+            <div class="alert alert-danger" *ngIf="currentDesignation.errors.required"><small
+                    style="text-align: right">This field is required</small></div>
+        </div>
+    </div>
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><input type="text" name="currentCTC" #currentCTC='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter currentCTC"> </div>
+        <div *ngIf="currentCTC.touched && currentCTC.invalid">
+            <div class="alert alert-danger" *ngIf="currentCTC.errors.required"><small style="text-align: right">This
+                    field is required</small></div>
+        </div>
+    
+        <div class="form-group col-md-6 ty-font left user-input-wrp"><input type="text" name="expectedCTC" #expectedCTC='ngModel' ngModel id=""
+                class="form-control" required placeholder="enter expectedCTC"> </div>
+        <div *ngIf="expectedCTC.touched && expectedCTC.invalid">
+            <div class="alert alert-danger" *ngIf="expectedCTC.errors.required"><small
+                    style="text-align: right">This field is required</small></div>
+        </div>
+    </div>
+    <div class="form-row mt-3">
+        <div class="form-group col-md-6 ty-font user-input-wrp"><input type="number" name="noticePeriod" #noticePeriod='ngModel' ngModel
+                id="" class="form-control" required placeholder="enter noticePeriod"> </div>
+        <div *ngIf="noticePeriod.touched && noticePeriod.invalid">
+            <div class="alert alert-danger" *ngIf="noticePeriod.errors.required"><small
+                    style="text-align: right">This field is required</small></div> 
+            </div>
+            <div class="form-group">
+                <input type="number" name='interviewId' #interviewId='ngModel' [(ngModel)]='requirmentservice.selectedInterview.interviewId'
+                    class="form-control">
+            </div>
+        </div>
+    <div> <button type="submit" [disabled]='candidateInfo.invalid'
+            class="btn btn-outline-primary float-right">AddCandidate</button> </div>
+</form>
+</div>

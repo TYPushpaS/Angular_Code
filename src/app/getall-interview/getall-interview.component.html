@@ -1,0 +1,46 @@
+  <link rel="stylesheet" href="https://github.com/ThanushreeCU/TY_TechElevate_TrainingMaintenance_Thanushree/blob/master/ty-styles-table.css">
+  
+
+<div class="container">
+	<div class="col-md-11  mt-4">
+		<h3 class="ty-heading">Interview Details</h3>
+		<table class="table table-hover table-bordered">
+
+        <thead class="text-white ty-header">
+            <tr>
+                <th>Sl No</th>
+                <th>interviewId</th>
+                <th>createdDate</th>
+                <th>interviewlocation</th>
+                <th>interviewtype</th>
+                <th>skills</th>
+                <th>status</th>
+                <th>remarks</th>
+                <th>interviewer</th>
+                <th>hrName</th>
+                <th>RequirementId</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of interview; index as i'  (click)='addcandidate(user)'>
+                <td>{{i+1}}</td>
+                <td>{{user.interviewId}}</td>
+                <td>{{user.createdDate}}</td>
+                <td>{{user.interviewlocation}}</td>
+                <td>{{user.interviewtype}}</td>
+                <td>{{user.skills}}</td>
+                <td>{{user.status}}</td>
+                <td>{{user.remarks}}</td>
+                <td>{{user.interviewer}}</td>
+                <td>{{user.hrName}}</td>
+                <td>{{user.requirmentId}}</td>
+              
+            </tr>
+        </tbody>
+    </table>
+</div> 
+</div> 
+
+
+

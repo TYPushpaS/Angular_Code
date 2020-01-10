@@ -1,0 +1,118 @@
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        
+        <div class=" card card-body col-md-4 offset-4 mt-5">
+            <form action="" #schedulingform='ngForm' (ngSubmit)='addinterview(schedulingform)' class="form-container">
+                <h1 style="text-align: center;color:blue;font-family: fantasy; "> Scheduling candidate!!</h1><br>
+                <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="number" name='scheduledCandidateId' #scheduledCandidateId='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.candidateId' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='candidateName' #candidateName='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.candidateName' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="email" name='email' #email='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.email' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="number" name='phoneNumber' #phoneNumber='ngModel' [(ngModel)]='requirmentservice.selectedCandidate.phoneNumber'
+                        class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='govtId' #govtId='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.govtId' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='relocate' #relocate='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.relocate' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='candidateType' #candidateType='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.candidateType' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="number" name='percentage' #percentage='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.percentage' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='currentDesignation' #currentDesignation='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.currentDesignation' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="number" name='yearOfExperience' #yearOfExperience='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.yearOfExperience' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="number" name='noticePeriod' #noticePeriod='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.noticePeriod' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="number" name='currentCTC' #currentCTC='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.currentCTC' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="number" name='expectedCTC' #expectedCTC='ngModel'
+                        [(ngModel)]='requirmentservice.selectedCandidate.expectedCTC' class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="date" name='createdDate' #createdDate='ngModel'ngModel class="form-control" placeholder="interview date">
+                </div> 
+            </div>
+            <div class="form-row mt-3">
+                
+                     <div class="form-group col-md-6 ty-font user-input-wrp"> <select class="form-control" id="input" name="interviewtype" 
+                        #interviewtype='ngModel' ngModel required>
+                        <option value="" selected disabled hidden>Enter the interviewtype</option>
+                        <option>Programming</option>
+                        <option>Written</option>
+                        <option>Aptitude</option>
+                        <option>GroupDiscussion</option>
+                        <option>Technical faceToface</option>
+                        <option>Others</option>
+                    </select> </div> 
+                
+                     <div class="form-group col-md-6 ty-font left user-input-wrp"> <select class="form-control" id="input" name="skills" #skills='ngModel'
+                        ngModel required>
+                        <option value="" selected disabled hidden>Enter the skills</option>
+                        <option>Java Full Stack</option>
+                        <option>Mean Stack</option>
+                        <option>DataScience</option>
+                        <option>Mearn</option>
+                        <option>Dot Net</option>
+                        <option>Others</option>
+                    </select> </div>
+            </div>
+
+            <div class="form-row mt-3">
+                 <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='remarks' #remarks='ngModel' placeholder="provide remark"
+                        ngModel class="form-control">
+                </div>
+                 <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="datetime" name='interviewer' #interviewer='ngModel'ngModel class="form-control" placeholder="interviewer name">
+                </div> 
+            </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark col-md-6 form-control float-right">scheduleInterview</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>

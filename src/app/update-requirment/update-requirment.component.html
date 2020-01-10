@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://github.com/ThanushreeCU/TY_TechElevate_TrainingMaintenance_Thanushree/blob/master/ty-styles-table.css">
+
+ 
+<div class="container">
+	<div class="col-md-6  mt-4">
+		<h3 class="ty-heading">Interview Details</h3>
+		<table class="table table-hover table-bordered">
+
+        <thead class="text-white ty-header">
+            <tr>
+                <th>Sl No</th>
+                <th>requirmentId</th>
+                <th>client</th>
+                <th>technology</th>
+                <th>yearOfExperience</th>
+                <th>location</th>
+                <th>numberOfPosition</th>
+                <th>opendate</th>
+                <th>closedate</th>
+                <th>role</th>
+                <th>rate</th>
+                <th>contact Person</th>
+                <th>jobDiscription</th>
+                <th>Update</th>
+                <th>Updater Name</th>
+                <th>Updated Time</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            <tr *ngFor='let user of req; index as i' (click)='addreqschedule(user)'>
+                <td>{{i+1}}</td>
+                <td>{{user.requirmentId}}</td>
+                <td>{{user.client}}</td>
+                <td>{{user.technology}}</td>
+                <td>{{user.yearOfExperience}}</td>
+                <td>{{user.location}}</td>
+                <td>{{user.numberOfPosition}}</td>
+                <td>{{user.opendate}}</td>
+                <td>{{user.closedate}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.rate}}</td>
+                <td>{{user.contact}}</td>
+                <td>{{user.jobDiscription}}</td>
+                <td><button class="btn btn-warning" (click)='updateReq(user)'>Update</button></td>
+                <td>{{user.uname}}</td>
+                <td>{{user.time}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+</div> 
+

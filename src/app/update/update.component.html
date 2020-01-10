@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://github.com/ThanushreeCU/TY_TechElevate_TrainingMaintenance_Thanushree/blob/master/ty-styles-form.css">
+  
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-4 offset-md-3">
+            <form action="" #reqform='ngForm' (ngSubmit)='addreq(reqform)' class="form-container">
+                <h1 style="text-align: center;color:blue;font-family: fantasy; "> Update Requirment!!</h1><br>
+
+    
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="hidden" name='requirmentId' #requirmentId='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.requirmentId' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='client' #client='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.client' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='technology' #technology='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.technology' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='yearOfExperience' #yearOfExperience='ngModel' [(ngModel)]='RequirmentService.selectedRequirment.yearOfExperience'
+                        class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='location' #location='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.location' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="number" name='numberOfPosition' #numberOfPosition='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.numberOfPosition' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='opendate' #opendate='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.opendate' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='closedate' #closedate='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.closedate' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='role' #role='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.role' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='rate' #rate='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.rate' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <input type="text" name='contact' #contact='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.contact' class="form-control">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='jobDiscription' #jobDiscription='ngModel' [(ngModel)]='RequirmentService.selectedRequirment.jobDiscription'
+                        class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font  user-input-wrp">
+                    <input type="text" name='uname' #uname='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.uname' class="form-control"
+                        placeholder="enter updater name...">
+                </div>
+                <div class="form-group col-md-6 ty-font left user-input-wrp">
+                    <input type="text" name='time' #time='ngModel'
+                        [(ngModel)]='RequirmentService.selectedRequirment.time' class="form-control">
+                </div>
+            </div>
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6 ty-font user-input-wrp">
+                    <button type="submit" class="btn btn-dark col-md-6 form-control float-right">Updated</button>
+                </div>
+            </div>
+            </form>
+        </div>
+
+    </div>

@@ -1,0 +1,53 @@
+
+ <link rel="stylesheet" href="https://github.com/ThanushreeCU/TY_TechElevate_TrainingMaintenance_Thanushree/blob/master/ty-styles-table.css">
+
+
+<div class="container">
+	<div class="col-md-11  mt-4">
+		<h3 class="ty-heading">Candidate Details</h3>
+		<table class="table table-hover table-bordered">
+			<thead class="text-white ty-header">
+                <tr>
+                    <th>Sl No</th>
+                    <th>candidateId</th>
+                    <th>candidateName</th>
+                    <th>email</th>
+                    <th>phoneNumber</th>
+                    <th>govtId</th>
+                    <th>relocate</th>
+                    <th>candidateType</th>
+                    <th>yearOfPassing</th>
+                    <th>percentage</th>
+                    <th>currentDesignation</th>
+                    <th>yearOfExperience</th>
+                    <th>noticePeriod</th>
+                    <th>currentCTC</th>
+                    <th>expectedCTC</th>
+                    <th>Interview Id</th>
+                </tr>
+            </thead>
+            <tbody class="bg-light">
+                <tr *ngFor='let user of candidate; index as i' (click)="schedule(user)">
+                    <td>{{i+1}}</td>
+                    <td>{{user.candidateId}}</td>
+                    <td>{{user.candidateName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phoneNumber}}</td>
+                    <td>{{user.govtId}}</td>
+                    <td>{{user.relocate}}</td>
+                    <td>{{user.candidateType}}</td>
+                    <td>{{user.yearOfPassing}}</td>
+                    <td>{{user.percentage}}</td>
+                    <td>{{user.currentDesignation}}</td>
+                    <td>{{user.yearOfExperience}}</td>
+                    <td>{{user.noticePeriod}}</td>
+                   <td>{{user.currentCTC}}</td>
+                   <td>{{user.expectedCTC}}</td>
+                   <td>{{user.interviewId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</div> 
+    
+    
